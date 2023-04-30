@@ -20,10 +20,15 @@ document.addEventListener('DOMContentLoaded',async () => {
     btnBox.classList.add('btn-box');
     const done = document.createElement('button');
     done.id = 'done';
-    done.textContent = 'done'
+    done.className = "material-symbols-outlined"
+    done.textContent ='fact_check'
+    // <span >
+    
+    // </span>
     const undone = document.createElement('button');
     undone.id = 'undone';
-    undone.textContent = 'undone'
+    undone.className = "material-symbols-outlined"
+    undone.textContent = 'hourglass_top'
     btnBox.append(done, undone);
     taskEl.append(taskName, btnBox);
     taskCard.append(taskEl);
@@ -53,7 +58,7 @@ const Eventid = e.target.id
     const parent = e.target.closest('.card')
     const resp = await fetch(`/api/v1/posts/done/${parent.id}`,{method:'PUT'});
     const result = await resp.json();
-    window.location.reload();
+    window.location.replace('/')
     }
     if(Eventid === 'undone') {
         

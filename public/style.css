@@ -7,24 +7,36 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 .dashboard {
+    display: flex;
+   margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+   
 
-   width: 50%;
-   margin-top: 30px 
 }
 .card {
-    width: 50%;
+    width: 500px;
     margin: auto;
 
+}
+#task-title {
+    padding: .7rem 0;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    margin-right: 10px;
+}
+#add {
+   background:none;
+    border: none;
 }
 .task {
     display: flex;
     align-items: center;
     padding: .5rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.055);
+    background-color: rgb(114, 219, 251);
+    margin: 7px 0;
     justify-content: space-between;
-    
 
 }
 .task p {
@@ -47,13 +59,15 @@ font-family: 'Poppins', sans-serif;
 #undone, #done {
    border: none;
    padding: 0 10px;
-   width: 100px;
+   width: 50px;
+   background: none;
    
 }
 .true {
     position: relative;
     text-decoration: line-through;
     background-color: rgb(197, 235, 8);
+    border-left: 10px rgb(37, 124, 10) solid
 }
 .true::before {
     content: 'Finished';
@@ -66,6 +80,7 @@ font-family: 'Poppins', sans-serif;
 .false {
     position: relative;
     background-color: orange;
+    border-left: 10px rgb(124, 59, 10) solid
 }
 .false::before {
     content: 'waiting';
