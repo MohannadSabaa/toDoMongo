@@ -37,16 +37,17 @@ font-family: 'Poppins', sans-serif;
 }
 .btn-box {
  display: flex;
- justify-content: center;
- gap: 10px;
+ justify-content: flex-end;
+ gap: 0 2px;
     background-color: rgb(187, 187, 187);
     height:40px;
-    width: 30%
+    
     
 }
 #undone, #done {
    border: none;
    padding: 0 10px;
+   width: 100px;
    
 }
 .true {
@@ -56,20 +57,21 @@ font-family: 'Poppins', sans-serif;
 }
 .true::before {
     content: 'Finished';
-    top:0;
-    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    right: 20px;
     position: absolute;
     color: red;
 }
 .false {
     position: relative;
-    
     background-color: orange;
 }
 .false::before {
     content: 'waiting';
-    top:0;
-    right: 0;
+    top:50%;
+    transform: translateY(-50%);
+    right: 20px;
     position: absolute;
-    color: red;
+    color: rgb(255, 255, 255);
 }
