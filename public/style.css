@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Noto+Sans&family=Poppins&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+.dashboard {
+
+   width: 50%;
+   margin-top: 30px 
+}
+.card {
+    width: 50%;
+    margin: auto;
+
+}
+.task {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin: 10px 0;
+    justify-content: space-between;
+    
+
+}
+.task p {
+    display: flex;
+    align-items: center;
+    padding: .3rem;
+    width: 70%;
+    height:40px;
+    border-radius: 4px;
+}
+.btn-box {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+    background-color: rgb(187, 187, 187);
+    height:40px;
+    width: 30%
+    
+}
+#undone, #done {
+   border: none;
+   padding: 0 10px;
+   
+}
+.true {
+    position: relative;
+    text-decoration: line-through;
+    background-color: rgb(197, 235, 8);
+}
+.true::before {
+    content: 'Finished';
+    top:0;
+    right: 0;
+    position: absolute;
+    color: red;
+}
+.false {
+    position: relative;
+    
+    background-color: orange;
+}
+.false::before {
+    content: 'waiting';
+    top:0;
+    right: 0;
+    position: absolute;
+    color: red;
+}
