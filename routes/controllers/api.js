@@ -8,21 +8,22 @@ connection();
 
 const addTask = async (req, res) => {
      const {task} = req.body
-     const toDo = new ToDo({task: task });
+     const toDo = new ToDo({task});
      const result = await toDo.save();
-     res.status(200).json({message: 'task has been added'})
+     res.json({message: 'task has been added'})
  }
  const done = async (req, res) => {
     const {id} = req.params
-    const taskDone = await ToDo.updateOne({_id: id},{$set:{__v: 1}})
+    const taskDone = await ToDo
+    .updateOne({_id: id},{$set:{__v: 1}})
    
    res.json({message: 'done'})
  }
  const undone = async (req, res) => {
    const {id} = req.params
-   console.log(id)
-    const taskUndone = await ToDo.updateOne({_id: id},{$set: {__v: 0}})
-   res.json({message: 'undone'})
+    const taskUndone = await ToDo
+    .updateOne({_id: id},{$set: {__v: 0}})
+    res.json({message: 'undone'})
  }
  const getAllTasks = async (req, res) => {
     const  getTasks =  await ToDo
@@ -33,10 +34,15 @@ const addTask = async (req, res) => {
 const deleteTask = async (req, res) => {
 
 const {id} = req.params;
-console.log(req.params)
-const task = await ToDo.deleteOne({_id: id});
+const task = await ToDo
+.deleteOne({_id: id});
 res.json({message: 'TaskDeleted'});
 
 }
 
- module.exports = {addTask, getAllTasks, done, undone, deleteTask}
+ module.exports = {
+  addTask, 
+  getAllTasks, 
+  done, 
+  undone, 
+  deleteTask}

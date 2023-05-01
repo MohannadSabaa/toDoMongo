@@ -40,26 +40,6 @@ const Customer = new mongoose.model('customers', customerSchema)
 
 
 
-
-
-const customer = new Customer ({
-    fName: 'mohannad',
-    lName: 'sabea',
-    cardID: 123-00-15-10,
-    isExp: false,
-    gender: 'male'
-})
-
-const customer2 = new Customer({
-    fName:'Jamila',
-    lName:'Sabea',
-    cardID: 15-1234-00,
-    isExp: true,
-    gender: 'Female'
-})
-
-
-
 const postSchema = new mongoose.Schema({
     title: String,
     content: String,
