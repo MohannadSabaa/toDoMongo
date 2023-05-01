@@ -28,8 +28,9 @@ ul {
 
 }
 #task-title {
-    padding: .7rem 0;
-    width: 400px;
+
+    padding: .7rem;
+    width: 450px;
     border: 1px solid rgba(0, 0, 0, 0.179);
     margin-right: 10px;
 }
@@ -46,6 +47,7 @@ ul {
 #add {
    background:none;
     border: none;
+   
 }
 .task {
     display: flex;
@@ -81,6 +83,14 @@ cursor: pointer;
    width: 50px;
    background: none;
    
+}
+#delete:hover {
+    background-color: rgb(255, 60, 21);
+}
+#delete {
+    
+    background-color: rgb(231, 56, 56);
+    border:none
 }
 .true {
     position: relative;

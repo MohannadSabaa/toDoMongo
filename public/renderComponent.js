@@ -20,8 +20,12 @@ const renderHook = ({_id, task, __v}) => {
     const undone = document.createElement('button');
     undone.id = 'undone';
     undone.className = "material-symbols-outlined"
-    undone.textContent = 'hourglass_top'
-    btnBox.append(done, undone);
+    undone.textContent = 'hourglass_top';
+    const delBtn = document.createElement('button');
+    delBtn.id = 'delete';
+    delBtn.className ="material-symbols-outlined"
+    delBtn.textContent = 'delete'
+    btnBox.append(done, undone, delBtn);
     taskEl.append(taskName, btnBox);
     taskCard.append(taskEl);
     container.append(taskCard)
